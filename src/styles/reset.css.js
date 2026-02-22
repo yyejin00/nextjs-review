@@ -26,8 +26,3 @@ globalStyle('input, textarea', {
   font: 'inherit',
 });
 
-// 이미지 초기화
-globalStyle('img', {
-  maxWidth: '100%',
-  display: 'block',
-});
