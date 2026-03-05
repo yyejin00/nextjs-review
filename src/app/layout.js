@@ -20,8 +20,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <GlobalLayout>{children}</GlobalLayout>
+    <html lang="ko">
+      <body>
+        <GlobalLayout>{children}</GlobalLayout>
+      </body>
     </html>
   );
 }

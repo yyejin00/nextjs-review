@@ -1,6 +1,5 @@
-// navigation.css.ts
 import { style, globalStyle } from '@vanilla-extract/css';
-
+import { vars } from '@/styles/globals.css';
 export const globalNavigationBar = style({
   position: 'sticky',
   top: 0,
@@ -11,7 +10,7 @@ export const innerNav = style({
   display: 'flex',
   justifyContent: 'space-between',
   padding: '9px 200px',
-  backgroundColor: 'var(--color_white)',
+  backgroundColor: vars.color.white,
 
   '@media': {
     '(max-width: 1200px)': {
@@ -55,18 +54,18 @@ export const menuStyle = style({
 });
 
 export const menu = style({
-  fontWeight: 'var(--font_content_weight)',
-  color: 'var(--font_color_title)',
-  fontSize: 'var(--font_highlight_size)',
+  fontWeight: vars.font.contentWeight,
+  color: vars.color.title,
+  fontSize: vars.font.highlightSize,
 });
 
 export const loginButton = style({
   textDecoration: 'none',
-  color: 'var(--color_white)',
-  backgroundColor: 'var(--color_highlight)',
+  color: vars.color.white,
+  backgroundColor: vars.color.highlight,
   padding: '12px 32px',
   borderRadius: '8px',
-  fontSize: 'var(--font_blue_size)',
+  fontSize: vars.font.blueSize,
 });
 
 globalStyle('a', {
