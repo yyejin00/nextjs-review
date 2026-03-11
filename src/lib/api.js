@@ -1,7 +1,20 @@
 const BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL ??
   'https://panda-market-api.vercel.app';
+export async function loginUser(userId,userPassword){
+  const response = await fetch (`${BASE_URL}/auth/signIn`,{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newArticle),
+  });
+  if (!response.ok) {
+    throw new Error("Failed to upload the article.");
+  }
 
+  return await response.json();
+}
   
 
 // 4. 포스트 업로드 함수를 만듭니다.
