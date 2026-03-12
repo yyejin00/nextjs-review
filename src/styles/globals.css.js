@@ -1,57 +1,40 @@
-import { createGlobalTheme, globalStyle } from '@vanilla-extract/css';
-globalStyle('html, body', {
+import { globalStyle } from '@vanilla-extract/css';
+
+import { vars } from '@/styles/tokens.css';
+
+globalStyle('*', {
+  boxSizing: 'border-box',
   margin: 0,
   padding: 0,
 });
 
+globalStyle('html, body', {
+  width: '100%',
+});
+
+globalStyle('body', {
+  fontFamily: vars.font.body,
+  color: vars.color.gray700,
+  backgroundColor: vars.color.white,
+  wordBreak: 'keep-all',
+});
+
 globalStyle('a', {
+  color: 'inherit',
   textDecoration: 'none',
+});
+
+globalStyle('button, input, textarea, select', {
+  font: 'inherit',
   color: 'inherit',
 });
 
-globalStyle('*', {
-  boxSizing: 'border-box',
-});
-
-export const vars = createGlobalTheme(':root', {
-  color: {
-    white: '#ffffff',
-    darkgrey: '#9ca3af',
-    loginBlack: '#1f2937',
-    loginGrey: '#f3f4f6',
-    highlight: '#3692ff',
-    loginQuick: '#e6f2ff',
-    lightblue: '#cfe5ff',
-    footerBackground: '#111827',
-    mainContentBackground: '#fcfcfc',
-    fontTitle: '#374151',
-    fontFooter: '#e5e7eb',
-    red: '#f76464',
-  },
-  font: {
-    titleWeight: '700',
-    contentWeight: '500',
-    titleSize: '40px',
-    highlightSize: '18px',
-    highlightWeight: '700',
-    contentSize: '24px',
-    footerSize: '16px',
-    footerWeight: '400',
-    blueSize: '16px',
-    blueWeight: '600',
-    lineHeight: '32px',
-  },
-});
-
-globalStyle('*', {
-  boxSizing: 'border-box',
-});
-
-globalStyle('a:hover', {
+globalStyle('button', {
+  border: 0,
+  background: 'none',
   cursor: 'pointer',
 });
 
-globalStyle('html, body', {
-  fontFamily: 'Pretendard, sans-serif',
-  fontSize: '10px',
+globalStyle('img, svg', {
+  verticalAlign: 'bottom',
 });
