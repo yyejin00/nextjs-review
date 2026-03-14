@@ -1,8 +1,10 @@
-import React from 'react'
-import BestBoardItem from '../../[id]/_components/BestBoardItem/BestBoardItem'
+import BestBoardItem from '../../[id]/_components/BestBoardItem/BestBoardItem';
 
 export default function BestBoard() {
   return (
-    <div>BestBoard<BestBoardItem/></div>
-  )
+    <div>
+      베스트 게시글
+      <BestBoardItem />
+    </div>
+  );
 }

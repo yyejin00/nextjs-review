@@ -1,6 +1,9 @@
+import BoardContainer from "./_components/BoardContainer/BoardContainer";
+
 export default function BoardPage({ searchParams }) {
   return (
     <div>
+    <BoardContainer/>
       <div>베스트 게시글</div>
       <div>
         게시글

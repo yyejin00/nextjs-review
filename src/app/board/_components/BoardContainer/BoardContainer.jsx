@@ -1,10 +1,9 @@
 import AllBoard from '../AllBoard/AllBoard';
 import BestBoard from '../BestBoard/BestBoard';
 
-export default function BoardContainer() {
+export default function BoardContainer({bestArticles, AllAricles,page,pageSize,orderBy,}) {
   return (
     <div>
-      BoardContainer
       <BestBoard />
       <AllBoard />
     </div>
